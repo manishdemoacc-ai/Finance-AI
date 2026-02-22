@@ -1,7 +1,7 @@
 {
   "name": "FinanceAI - Smart Personal Finance Analyzer",
   "short_name": "FinanceAI",
-  "description": "AI-powered personal finance analyzer for students. Track expenses, predict spending, and achieve your financial goals.",
+  "description": "AI-powered personal finance analyzer for user. Track expenses, predict spending, and achieve your financial goals.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
