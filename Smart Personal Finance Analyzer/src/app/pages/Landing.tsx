@@ -245,7 +245,7 @@ export function Landing() {
               Ready to Transform Your Finances?
             </h2>
             <p className="text-xl text-indigo-100 mb-8">
-              Join thousands of students already managing their money smarter.
+              Join thousands of users already managing their money smarter.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/signup">
