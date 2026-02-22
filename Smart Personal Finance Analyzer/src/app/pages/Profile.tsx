@@ -49,7 +49,7 @@ export function Profile() {
               </Avatar>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">John Doe</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Student Account</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">User Account</p>
               </div>
             </div>
 
