@@ -107,7 +107,7 @@ export function Landing() {
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-              The smart finance analyzer designed for students. Track expenses, predict spending, and achieve your financial goals with AI-powered insights.
+              The smart finance analyzer designed to help the user analyze and balance the finances. Track expenses, predict spending, and achieve your financial goals with AI-powered insights.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
