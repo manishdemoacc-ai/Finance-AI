@@ -86,7 +86,7 @@ export function Dashboard() {
               </div>
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Budget</p>
-                <p className="font-semibold text-gray-900 dark:text-white">${budget.toLocaleString()}</p>
+                <p className="font-semibold text-gray-900 dark:text-white">₹{budget.toLocaleString()}</p>
               </div>
             </CardContent>
           </Card>
@@ -111,12 +111,12 @@ export function Dashboard() {
           <Card>
             <CardHeader>
               <CardDescription>This Month's Spending</CardDescription>
-              <CardTitle className="text-3xl">${monthlySpending.toLocaleString()}</CardTitle>
+              <CardTitle className="text-3xl">₹{monthlySpending.toLocaleString()}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">Budget: ${budget.toLocaleString()}</span>
+                  <span className="text-gray-600 dark:text-gray-400">Budget: ₹{budget.toLocaleString()}</span>
                   <span className={budgetPercentage > 80 ? 'text-red-500' : 'text-green-500'}>
                     {budgetPercentage.toFixed(0)}%
                   </span>
@@ -142,7 +142,7 @@ export function Dashboard() {
               <CardDescription className="text-indigo-100">AI Prediction</CardDescription>
               <CardTitle className="text-3xl text-white flex items-center">
                 <Brain className="w-8 h-8 mr-2" />
-                ${predictedNextMonth.toLocaleString()}
+                ₹{predictedNextMonth.toLocaleString()}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -158,17 +158,17 @@ export function Dashboard() {
           <Card>
             <CardHeader>
               <CardDescription>Savings Goal Progress</CardDescription>
-              <CardTitle className="text-3xl">${currentSavings.toLocaleString()}</CardTitle>
+              <CardTitle className="text-3xl">₹{currentSavings.toLocaleString()}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">Goal: ${savingsGoal.toLocaleString()}</span>
+                  <span className="text-gray-600 dark:text-gray-400">Goal: ₹{savingsGoal.toLocaleString()}</span>
                   <span className="text-teal-500">{savingsPercentage.toFixed(0)}%</span>
                 </div>
                 <Progress value={savingsPercentage} className="h-2" />
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  ${(savingsGoal - currentSavings).toLocaleString()} to go!
+                  ₹{(savingsGoal - currentSavings).toLocaleString()} to go!
                 </p>
               </div>
             </CardContent>
@@ -190,13 +190,13 @@ export function Dashboard() {
                     cx="50%"
                     cy="50%"
                     labelLine={false}
-                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    label={({ name, percent }) => `₹{name} ₹{(percent * 100).toFixed(0)}%`}
                     outerRadius={80}
                     fill="#8884d8"
                     dataKey="value"
                   >
                     {categoryData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
+                      <Cell key={`cell-₹{index}`} fill={entry.color} />
                     ))}
                   </Pie>
                   <Tooltip />
@@ -206,7 +206,7 @@ export function Dashboard() {
                 {categoryData.map((category, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: category.color }} />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{category.name}: ${category.value}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{category.name}: ₹{category.value}</span>
                   </div>
                 ))}
               </div>
