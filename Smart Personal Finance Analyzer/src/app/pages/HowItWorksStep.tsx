@@ -84,8 +84,8 @@ export function HowItWorksStep() {
           </div>
           <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
-              className={`h-full bg-gradient-to-r ${currentStep.gradient} rounded-full transition-all`}
-              style={{ width: `${(stepNumber / 4) * 100}%` }}
+              className={`h-full bg-gradient-to-r ₹{currentStep.gradient} rounded-full transition-all`}
+              style={{ width: `₹{(stepNumber / 4) * 100}%` }}
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ export function HowItWorksStep() {
         {/* Content */}
         <Card className="p-8 md:p-12 mb-8">
           <div className="text-center mb-8">
-            <div className={`w-24 h-24 mx-auto mb-6 rounded-3xl bg-gradient-to-br ${currentStep.gradient} flex items-center justify-center text-5xl`}>
+            <div className={`w-24 h-24 mx-auto mb-6 rounded-3xl bg-gradient-to-br ₹{currentStep.gradient} flex items-center justify-center text-5xl`}>
               {currentStep.image}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -107,7 +107,7 @@ export function HowItWorksStep() {
           <div className="space-y-4 mb-8">
             {currentStep.details.map((detail, index) => (
               <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${currentStep.gradient} text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5`}>
+                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ₹{currentStep.gradient} text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5`}>
                   {index + 1}
                 </div>
                 <p className="text-gray-700 dark:text-gray-300">{detail}</p>
@@ -119,7 +119,7 @@ export function HowItWorksStep() {
         {/* Navigation */}
         <div className="flex items-center justify-between">
           {stepNumber > 1 ? (
-            <Link to={`/how-it-works/step-${stepNumber - 1}`}>
+            <Link to={`/how-it-works/step-₹{stepNumber - 1}`}>
               <Button variant="outline" size="lg">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Previous Step
@@ -130,15 +130,15 @@ export function HowItWorksStep() {
           )}
 
           {stepNumber < 4 ? (
-            <Link to={`/how-it-works/step-${stepNumber + 1}`}>
-              <Button size="lg" className={`bg-gradient-to-r ${currentStep.gradient} text-white`}>
+            <Link to={`/how-it-works/step-₹{stepNumber + 1}`}>
+              <Button size="lg" className={`bg-gradient-to-r ₹{currentStep.gradient} text-white`}>
                 Next Step
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           ) : (
             <Link to="/signup">
-              <Button size="lg" className={`bg-gradient-to-r ${currentStep.gradient} text-white`}>
+              <Button size="lg" className={`bg-gradient-to-r ₹{currentStep.gradient} text-white`}>
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
