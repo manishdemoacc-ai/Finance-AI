@@ -18,7 +18,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold">
-              $
+              ₹
             </div>
             <span className="font-semibold text-lg text-gray-900 dark:text-white">FinanceAI</span>
           </Link>
