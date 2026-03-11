@@ -6,6 +6,7 @@ import { ArrowLeft, TrendingUp, TrendingDown, Brain, Calendar } from 'lucide-rea
 import { MobileBottomNav } from '../components/layout/MobileBottomNav';
 import { BarChart, Bar, LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, PieChart, Pie, Cell } from 'recharts';
 
+
 export function Analytics() {
   const monthlyComparison = [
     { month: 'Jan', spending: 2100, income: 3000 },
